@@ -1,56 +1,47 @@
 package eda2;
 
 public class Coche {
-	private String marca; 
-	private int velocidad;
-	private boolean estado;
-	private static int mostrarCantidadDeAutos;
+	private String marca;
+	private int precio;
+	private static int cantidadDeCoches;
+	private double presion;
 	
-	public Coche(String marca) {
+	public Coche () {
+		
+	}
+	
+	public void setMarca(String marca) {
 		this.marca=marca;
-		mostrarCantidadDeAutos++;
-	}
-	public Coche() {
-		this.marca="porsche";
-		mostrarCantidadDeAutos++;
 	}
 	
-	public String decirMarca() {
+	public int getPrecio() {
+		return this.precio;
+	}
+	
+	
+	public String getMarca() {
 		return this.marca;
 	}
 	
-	public void encender() {
-		this.estado= true;
+	
+	public static int getAutos() {
+		return cantidadDeCoches;
 	}
-	public static int mostrarAutos(){
-		return mostrarCantidadDeAutos;
+
+	public void aumentarCantidadDeAutos() {
+		cantidadDeCoches++;		
+	}
+	public void ingresarPrecio(int precio) {
+		this.precio=precio;
+		
 	}
 	
-	public void apagar() {
-		this.estado= false;
+	public void setPresion(double presion) {
+		this.presion=presion;
 	}
 	
-	public boolean mostrarEstado() {
-		return this.estado;
-	}
-	
-	public void aumentarVelocidad() {
-		this.velocidad++;
-	}
-	
-	public void disminuirVelocidad() {
-		this.velocidad--;
-	}
-	public void frenar() {
-		this.velocidad=0;
-	}
-	
-	public void irVelocidad(int numero) {
-		this.velocidad =numero;
-	}
-	
-	public int mostrarVelocidad() {
-		return this.velocidad;
+	public double getPresion() {
+		return this.presion;
 	}
 	
 }
